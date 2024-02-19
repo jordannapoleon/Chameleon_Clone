@@ -1,3 +1,11 @@
-.headerLayout{
+.header{
+    display: flex;
+    align-items: center;
+    height: 13vh;
+    font-size: 11vh;
     
+}
+
+.footer {
+    bottom: 0;
 }
