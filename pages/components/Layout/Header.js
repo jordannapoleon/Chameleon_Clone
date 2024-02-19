@@ -1,6 +1,8 @@
+import css from '@/styles/Layout.module.css'
+
 const Header = () => {
     return (
-        null
+        <h1 className={`${css.headerLayout}`}>Chameleon</h1>
     )
 };
 

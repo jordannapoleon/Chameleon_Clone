@@ -1,13 +1,20 @@
 //Libraries
 import React, { useEffect, useState } from "react";
-//Pages
 import Header from "./Header";
 import Footer from "./Footer";
+//Pages
+
 //Styling
 const Layout = ({ children }) => {
-    <Header />
-    {children}
-    <Footer />
+
+    return(
+        <>
+            <Header />
+            {children}
+            <Footer />
+        </>
+    );
+    
 };
 
 export default Layout;
