@@ -8,11 +8,10 @@
 
 .footer {
     height: 6vh;
-    display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
     font-size: small;
-
+    margin-top: auto;
 }
 
 .footer,

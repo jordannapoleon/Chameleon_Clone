@@ -9,6 +9,13 @@ const HomePage = () => {
 
     const router = useRouter();
 
+    const goToHostGame = (role) => {
+        router.push(`/Pregame?role=${role}`)
+    }
+    const goToLobby = (role => {
+        router.push(`/Findgames`)
+    })
+
     return (
         <>
             <div className={`${css.playerContainerHome}`}>
@@ -18,17 +25,17 @@ const HomePage = () => {
                     <input></input>
                 </div>
                 <div className={`${css.selectionContainerHome}`}>
-                    <button className={`${css.selectionButtonHome} ${indieFlower.className}`} type='button' onClick={() => router.push('/Pregame')}>Host Game</button>
-                    <button className={`${css.selectionButtonHome} ${indieFlower.className}`}type='button' onClick={() => router.push('/Findgames')}>Join Game</button>
+                    <button className={`${css.selectionButtonHome} ${indieFlower.className}`} type='button' onClick={() => goToHostGame('host')}>Host Game</button>
+                    <button className={`${css.selectionButtonHome} ${indieFlower.className}`}type='button' onClick={() => goToLobby()}>Join Game</button>
                 </div>
-                <div className={`${css.howToPlayHome} ${indieFlower.className}`}>
+                {/* <div className={`${css.howToPlayHome} ${indieFlower.className}`}>
                     <h2>How To Play</h2>
                     <li>ontrary to popular belief, Lorem Ipsum is not simply random text.</li>
                     <li>ontrary to popular belief, Lorem Ipsum is not simply random text.</li>
                     <li>ontrary to popular belief, Lorem Ipsum is not simply random text.</li>
                     <li>ontrary to popular belief, Lorem Ipsum is not simply random text.</li>
                     <li>ontrary to popular belief, Lorem Ipsum is not simply random text.</li>
-                </div>
+                </div> */}
             </div>
         </>
         
