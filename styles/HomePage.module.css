@@ -1,26 +1,48 @@
 .playerContainerHome {
-    top: 0;
-    height: 100%
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid red; */
+    flex: 1;
+    
 };
-.usernameInputHome {
 
-};
+.usernameContainerHome{
+    flex: 1;
+    display: flex;
+    width: 100%;
+    /* padding: 3vh; */
+
+    
+}
+.selectionContainerHome{
+    flex: .5;
+    display: flex;
+    width: 100%;
+}
 
 
 .selectionButtonHome {
-    width: 35vh;
-    height: 20vh;
-    font-size: 3vh;
     color: rgb(0, 0, 0);
     background-color: rgb(255, 238, 112);
+    border-color: rgba(255, 255, 255, 0);
+    flex: 1;
+    margin: 8vh 10vh 8vh 10vh;
+    height: 15vh;
+    border-radius: 2vh;
+    font-size: 200%;
 }
 .selectionButtonHome:hover {
     color: rgb(255, 238, 112);
     background-color: rgb(139, 179, 128);
 }
-.selectionContainerHome{
+
+.howToPlayHome {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

@@ -1,11 +1,22 @@
 .header{
-    display: flex;
     align-items: center;
+    justify-content: center;
     height: 13vh;
     font-size: 11vh;
     
 }
 
 .footer {
-    bottom: 0;
+    height: 6vh;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    font-size: small;
+
+}
+
+.footer,
+.header {
+    width: 100%;
+    display: flex;
 }
