@@ -1,0 +1,21 @@
+.header{
+    align-items: center;
+    justify-content: center;
+    height: 13vh;
+    font-size: 11vh;
+    
+}
+
+.footer {
+    height: 6vh;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: small;
+    margin-top: auto;
+}
+
+.footer,
+.header {
+    width: 100%;
+    display: flex;
+}

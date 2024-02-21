@@ -17,6 +17,8 @@
     #0071ff33 160deg,
     transparent 360deg
   );
+
+ 
   --secondary-glow: radial-gradient(
     rgba(255, 255, 255, 1),
     rgba(255, 255, 255, 0)
@@ -38,6 +40,14 @@
   --callout-border-rgb: 172, 175, 176;
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
+}
+
+#__next {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 6rem 0 6rem ;
+  min-height: 100vh;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -86,13 +96,14 @@ body {
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  /* color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
+    background-color: rgb(139, 179, 128);
 }
 
 a {
