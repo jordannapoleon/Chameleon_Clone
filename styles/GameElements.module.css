@@ -1,0 +1,26 @@
+.playerCountContainer {
+    border: .4vh solid rgb(12, 122, 12);
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr) ;
+    gap: 2vh;
+    padding: 1vh
+}
+
+.cardWrapper{
+    border: .3vh solid rgb(12, 122, 12);
+    height: 23vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5vh;
+
+}
+.cardWrapper > * {
+    flex: 1;
+    width: 100%;
+}
+
+.cardJoinButton{
+    width: 100%;
+}
