@@ -17,8 +17,7 @@ const HomePage = () => {
     })
 
     return (
-        <>
-            <div className={`${css.playerContainerHome}`}>
+            <main className={`${css.playerContainerHome}`}>
                 <div className={`${css.usernameContainerHome}`}>
                     <label for="UserName">User Name:
                     </label>
@@ -36,8 +35,7 @@ const HomePage = () => {
                     <li>ontrary to popular belief, Lorem Ipsum is not simply random text.</li>
                     <li>ontrary to popular belief, Lorem Ipsum is not simply random text.</li>
                 </div> */}
-            </div>
-        </>
+            </main>
         
     )
 };
