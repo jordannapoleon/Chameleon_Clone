@@ -1,9 +1,10 @@
+//Styling
+import css from '@/styles/HomePage.module.css'
+//Imports -> Hooks
 import React from "react";
 import { useRouter } from "next/router";
 import { indieFlower } from "../components/Fonts/Fonts";
 
-//Styling
-import css from '@/styles/HomePage.module.css'
 
 const HomePage = () => {
 
@@ -17,26 +18,39 @@ const HomePage = () => {
     })
 
     return (
-            <main className={`${css.playerContainerHome}`}>
-                <div className={`${css.usernameContainerHome}`}>
-                    <label for="UserName">User Name:
-                    </label>
-                    <input></input>
+        <main className={`${css.homeContainer}`}>
+            <div className={`${css.usernameWrapper}`}>
+                <label for="UserName">User Name:</label>
+                <input type='text' id='UserName'></input>
+            </div>
+            <div className={`${css.selectionWrapper}`}>
+                <button className={`${css.selectionButton} ${indieFlower.className}`} type='button' onClick={() => goToHostGame('host')}>Host Game</button>
+                <button className={`${css.selectionButton} ${indieFlower.className}`}type='button' onClick={() => goToLobby()}>Join Game</button>
+            </div>
+            <div className={`${css.howToPlayWrapper} ${indieFlower.className}`}>
+                <h2>How To Play!</h2>
+                <div>
+                    <ul>
+                        <li>
+                            One of you is the Chameleon - blend in and don’t get caught! <br />
+                        </li>
+                        <li>
+                            Each player, except the Chameleon, gets a secret topic.
+                            The Chameleon has to guess the topic while blending in.
+                        </li>
+                        <li>
+                            Each player must choose a word related to the secret topic.
+                            If your word is too obvious, the Chameleon might <br />
+                            figure out the secret topic. If it’s too vague, other players might think you’re the Chameleon!
+                        </li>
+                        <li>
+                            After everyone shares their word, debate and vote on who the Chameleon is. If the Chameleon isn't caught, <br />
+                            they escape; if caught, they can guess the topic to escape.
+                        </li>
+                    </ul>
                 </div>
-                <div className={`${css.selectionContainerHome}`}>
-                    <button className={`${css.selectionButtonHome} ${indieFlower.className}`} type='button' onClick={() => goToHostGame('host')}>Host Game</button>
-                    <button className={`${css.selectionButtonHome} ${indieFlower.className}`}type='button' onClick={() => goToLobby()}>Join Game</button>
-                </div>
-                {/* <div className={`${css.howToPlayHome} ${indieFlower.className}`}>
-                    <h2>How To Play</h2>
-                    <li>ontrary to popular belief, Lorem Ipsum is not simply random text.</li>
-                    <li>ontrary to popular belief, Lorem Ipsum is not simply random text.</li>
-                    <li>ontrary to popular belief, Lorem Ipsum is not simply random text.</li>
-                    <li>ontrary to popular belief, Lorem Ipsum is not simply random text.</li>
-                    <li>ontrary to popular belief, Lorem Ipsum is not simply random text.</li>
-                </div> */}
-            </main>
-        
+            </div>
+        </main>
     )
 };
 

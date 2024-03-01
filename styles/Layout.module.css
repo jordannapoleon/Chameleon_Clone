@@ -1,8 +1,9 @@
 .header{
     align-items: center;
     justify-content: center;
-    height: 13vh;
+    height: 5vh;
     font-size: 11vh;
+    flex: 1;
     
 }
 
@@ -16,6 +17,7 @@
 
 .footer,
 .header {
+
     width: 100%;
     display: flex;
 }
