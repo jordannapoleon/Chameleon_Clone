@@ -1,4 +1,4 @@
-export class GameInstance {
+class GameInstance {
     constructor (hostName) {
       this.host = hostName;
       this.players = [];
@@ -13,13 +13,12 @@ export class GameInstance {
             chameleon_count: 1,
             chameleon_hint: true
         };
-      this.scores = {};  
+      this.scores = [];  
     }
 
-    //Methods
 
+    // >>>>> Player Management <<<<< 
 
-    // >>>>> Player Management <<<<<
     // >>>>  1. Adding players
     addPlayer(playerId, playerName){
         if(this.currentGroupSize < this.maxGroupSize){
@@ -50,16 +49,10 @@ export class GameInstance {
     }
     // >>>>> In Game Logic Settings (Scoring / Categories / Chameleon)<<<<<
 
-
-
-
-
-
-
   }
 
 
-//   //TEST
+  //TEST
 
 //   const game = new GameInstance('Jordan', 5);
 
@@ -79,4 +72,4 @@ export default function generatePlayerId() {
 
 
 
-  module.export = GameInstance;
+  module.exports = GameInstance;
