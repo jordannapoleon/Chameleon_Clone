@@ -19,10 +19,10 @@ const HomePage = () => {
 
     return (
         <main className={`${css.homeContainer}`}>
-            <div className={`${css.usernameWrapper}`}>
+            {/* <div className={`${css.usernameWrapper}`}>
                 <label for="UserName">User Name:</label>
                 <input type='text' id='UserName'></input>
-            </div>
+            </div> */}
             <div className={`${css.selectionWrapper}`}>
                 <button className={`${css.selectionButton} ${indieFlower.className}`} type='button' onClick={() => goToHostGame('host')}>Host Game</button>
                 <button className={`${css.selectionButton} ${indieFlower.className}`}type='button' onClick={() => goToLobby()}>Join Game</button>

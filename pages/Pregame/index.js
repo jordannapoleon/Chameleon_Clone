@@ -11,7 +11,7 @@ export default function Pregame() {
     const { role } = router.query;
 
 
-    const renderedContent = () => {
+    const renderedContent = (gameObj) => {
 
         switch (role) {
 
@@ -19,7 +19,7 @@ export default function Pregame() {
                 return (
                     <main className={`${css.preGameContainer}`}>
                         <div className={`${css.preGameTopSection}`}>
-                            <div className={`${css.playerContainer}`}>
+                            <div className={`${css.playerWrapper}`}>
                             </div>
                         </div>
                     </main>
