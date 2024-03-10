@@ -14,7 +14,7 @@ const HomePage = () => {
         router.push(`/Pregame?role=${role}`)
     }
     const goToLobby = (role => {
-        router.push(`/Findgames`)
+        router.push(`/Lobby`)
     })
 
     return (

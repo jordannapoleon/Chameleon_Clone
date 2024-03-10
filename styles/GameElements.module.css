@@ -1,19 +1,23 @@
 .playerCountContainer {
     border: .4vh solid rgb(12, 122, 12);
+    border-radius: 1vh;
     width: 80%;
     display: grid;
     grid-template-columns: repeat(5, 1fr) ;
     gap: 2vh;
-    padding: 1vh
+    padding: 1vh;
+    background-color: rgb(22, 101, 0, .2);
 }
 
 .cardWrapper{
     border: .3vh solid rgb(12, 122, 12);
+    border-radius: 1vh;
     height: 23vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 1.5vh;
+    background-color: rgb(139, 179, 128);
 
 }
 .cardWrapper > * {
@@ -23,4 +27,10 @@
 
 .cardJoinButton{
     width: 100%;
+    border-radius: 1vh;
+    border: none;
+    box-shadow: none;
+}
+.cardJoinButton:hover{
+
 }

@@ -1,8 +1,8 @@
 import React from "react";
 import Layout from "../components/Layout/Layout";
-import PlayersModule from "../components/LobbyUi/PlayersModule";
+import PlayersModule from "../components/Lobby/PlayersModule";
 
-export default function FindGame(){
+export default function Lobby(){
     return (
         <>
             <Layout>
