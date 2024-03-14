@@ -18,8 +18,14 @@ export default function Pregame() {
             case 'host':
                 return (
                     <main className={`${css.preGameContainer}`}>
-                        <div className={`${css.preGameTopSection}`}>
+                        <div className={`${css.preGamePlayersPanel}`}>
                             <div className={`${css.playerWrapper}`}>
+                                <div>Jordan</div>
+                                <div>Jordan</div>
+                            </div>
+                        </div>
+                        <div className={`${css.preGameSettingsPanel}`}>
+                            <div className={`${css.settingsWrapper}`}>
                             </div>
                         </div>
                     </main>

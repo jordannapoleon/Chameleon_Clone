@@ -13,9 +13,9 @@ const HomePage = () => {
     const goToHostGame = (role) => {
         router.push(`/Pregame?role=${role}`)
     }
-    const goToLobby = (role => {
+    const goToLobby = (role) => {
         router.push(`/Lobby`)
-    })
+    }
 
     return (
         <main className={`${css.homeContainer}`}>
