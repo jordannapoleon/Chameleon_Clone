@@ -3,16 +3,21 @@ import css from '@/styles/PreGamePage.module.css'
 import React from "react";
 import Layout from "../components/Layout/Layout";
 import { useRouter } from "next/router";
-const GameInstance = require('../components/GameLogic/gameInstance');
+
+//TEST
+import { testGameObj } from "../components/Test/Test-GameInstance"
 
 
 export default function Pregame() {
     const router = useRouter();
-    const { role } = router.query;
+    const { role, hostName} = router.query;
+
+    
+    
 
 
     const renderedContent = (gameObj) => {
-
+         console.log(gameObj)
         switch (role) {
 
             case 'host':
@@ -20,8 +25,8 @@ export default function Pregame() {
                     <main className={`${css.preGameContainer}`}>
                         <div className={`${css.preGamePlayersPanel}`}>
                             <div className={`${css.playerWrapper}`}>
-                                <div>Jordan</div>
-                                <div>Jordan</div>
+                                <h1>Players: {gameObj.currentGroupSize} / {gameObj.maxGroupSize}</h1>
+                                {gameObj.players.map((player, index) => (<div key={index}>{player}</div>))}
                             </div>
                         </div>
                         <div className={`${css.preGameSettingsPanel}`}>
@@ -52,7 +57,7 @@ export default function Pregame() {
 
     return (
         <Layout>
-            {renderedContent()}
+            {renderedContent(testGameObj)}
         </Layout>
     )
 

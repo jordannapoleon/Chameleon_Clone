@@ -1,8 +1,8 @@
-let testGameObj = {
+const testGameObj = {
     host: "Jordan",
-    players: ["Jordan", "Annie", "Bubba", ],
+    players: ["Jordan", "Annie", "Bubba" ],
     maxGroupSize: 4,
-    currentGroupSize: 1,
+    currentGroupSize: 3,
     private: true,
     joinCode: undefined,
     gameSettings: {
@@ -14,3 +14,5 @@ let testGameObj = {
       },
     scores: []  
   }
+
+  export { testGameObj };
