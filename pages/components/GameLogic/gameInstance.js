@@ -3,7 +3,7 @@ export default class GameInstance {
       this.host = hostName;
       this.players = [hostName];
       this.maxGroupSize = 4;
-      this.currentGroupSize = 1;
+      this.currentGroupSize = this.players.length;
       this.private = true;
       this.joinCode = undefined;
       this.gameSettings = {

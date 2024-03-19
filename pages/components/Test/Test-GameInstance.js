@@ -2,7 +2,6 @@ const testGameObj = {
     host: "Jordan",
     players: ["Host", "Player 2", "Player 3", "Player 4" ],
     maxGroupSize: 4,
-    currentGroupSize: 3,
     private: true,
     joinCode: undefined,
     gameSettings: {
@@ -14,5 +13,7 @@ const testGameObj = {
       },
     scores: []  
   }
+
+  testGameObj.currentGroupSize = testGameObj.players.length
 
   export { testGameObj };
