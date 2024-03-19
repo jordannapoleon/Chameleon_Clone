@@ -1,6 +1,6 @@
 const testGameObj = {
     host: "Jordan",
-    players: ["Jordan", "Annie", "Bubba" ],
+    players: ["Host", "Player 2", "Player 3", "Player 4" ],
     maxGroupSize: 4,
     currentGroupSize: 3,
     private: true,

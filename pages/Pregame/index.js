@@ -24,10 +24,15 @@ export default function Pregame() {
                 return (
                     <main className={`${css.preGameContainer}`}>
                         <div className={`${css.preGamePlayersPanel}`}>
+                            <h1>Players: {gameObj.currentGroupSize} / {gameObj.maxGroupSize}</h1>
                             <div className={`${css.playerWrapper}`}>
-                                <h1>Players: {gameObj.currentGroupSize} / {gameObj.maxGroupSize}</h1>
                                 {gameObj.players.map((player, index) => (<div key={index}>{player}</div>))}
+                                <div className={`${css.invitePlayer}`}>+</div>
                             </div>
+                                <div className={`${css.privacyWrapper}`}>
+                                    <h2>Privacy:</h2>
+                                    <button>Closed</button>
+                                </div>
                         </div>
                         <div className={`${css.preGameSettingsPanel}`}>
                             <div className={`${css.settingsWrapper}`}>
