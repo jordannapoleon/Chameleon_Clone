@@ -1,9 +1,9 @@
-class GameInstance {
+export default class GameInstance {
     constructor (hostName) {
       this.host = hostName;
-      this.players = [];
+      this.players = [hostName];
       this.maxGroupSize = 4;
-      this.currentGroupSize = 1;
+      this.currentGroupSize = this.players.length;
       this.private = true;
       this.joinCode = undefined;
       this.gameSettings = {
@@ -66,10 +66,6 @@ class GameInstance {
 
 
 //Generates playerId
-export default function generatePlayerId() {
+function generatePlayerId() {
     return Math.random().toString(24).substr(2, 8);
 }
-
-
-
-  module.exports = GameInstance;

@@ -1,29 +1,39 @@
 //Styling
 import css from '@/styles/HomePage.module.css'
 //Imports -> Hooks
-import React from "react";
-import { useRouter } from "next/router";
+import { React, useState } from "react";
+import { useRouter } from 'next/router';
+import GameInstance from '../components/GameLogic/gameInstance';
 import { indieFlower } from "../components/Fonts/Fonts";
 
 
 const HomePage = () => {
 
+    const [hostName, setHostName] = useState('Jordan'); //HARD CODED CHANGE LATER
     const router = useRouter();
 
-    const goToHostGame = (role) => {
-        router.push(`/Pregame?role=${role}`)
-    }
-    const goToLobby = (role => {
-        router.push(`/Findgames`)
-    })
+    //Handle Host Button Logic and creating a gameObj
+    const goToHostGame = () => {
+
+
+        router.push({
+          pathname: '/Pregame',
+          query: { role: 'host', hostName: hostName}
+        });
+      };
+    
+      const goToLobby = () => {
+        router.push('/Lobby');
+      };
+
 
     return (
         <main className={`${css.homeContainer}`}>
-            <div className={`${css.usernameWrapper}`}>
+            {/* <div className={`${css.usernameWrapper}`}>
                 <label for="UserName">User Name:</label>
                 <input type='text' id='UserName'></input>
-            </div>
-            <div className={`${css.selectionWrapper}`}>
+            </div> */}
+               <div className={`${css.selectionWrapper}`}>
                 <button className={`${css.selectionButton} ${indieFlower.className}`} type='button' onClick={() => goToHostGame('host')}>Host Game</button>
                 <button className={`${css.selectionButton} ${indieFlower.className}`}type='button' onClick={() => goToLobby()}>Join Game</button>
             </div>

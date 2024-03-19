@@ -3,23 +3,39 @@ import css from '@/styles/PreGamePage.module.css'
 import React from "react";
 import Layout from "../components/Layout/Layout";
 import { useRouter } from "next/router";
-const GameInstance = require('../components/GameLogic/gameInstance');
+
+//TEST
+import { testGameObj } from "../components/Test/Test-GameInstance"
 
 
 export default function Pregame() {
     const router = useRouter();
-    const { role } = router.query;
+    const { role, hostName} = router.query;
+
+    
+    
 
 
-    const renderedContent = () => {
-
+    const renderedContent = (gameObj) => {
+         console.log(gameObj)
         switch (role) {
 
             case 'host':
                 return (
                     <main className={`${css.preGameContainer}`}>
-                        <div className={`${css.preGameTopSection}`}>
-                            <div className={`${css.playerContainer}`}>
+                        <div className={`${css.preGamePlayersPanel}`}>
+                            <h1>Players: {gameObj.currentGroupSize} / {gameObj.maxGroupSize}</h1>
+                            <div className={`${css.playerWrapper}`}>
+                                {gameObj.players.map((player, index) => (<div key={index}>{player}</div>))}
+                                <div className={`${css.invitePlayer}`}>+</div>
+                            </div>
+                                <div className={`${css.privacyWrapper}`}>
+                                    <h2>Privacy:</h2>
+                                    <button>Closed</button>
+                                </div>
+                        </div>
+                        <div className={`${css.preGameSettingsPanel}`}>
+                            <div className={`${css.settingsWrapper}`}>
                             </div>
                         </div>
                     </main>
@@ -46,7 +62,7 @@ export default function Pregame() {
 
     return (
         <Layout>
-            {renderedContent()}
+            {renderedContent(testGameObj)}
         </Layout>
     )
 
